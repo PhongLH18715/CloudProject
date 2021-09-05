@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="shortcut icon" type="image/jpg" href="/Ưimages/dragon_icon.jpg" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Add New Product</title>
+</head>
+
+<body>
+    <div class="header">
+        <img src="/images/banner.jpg" alt="Banner_image_PhongStore" style="width: 100%; max-height: 400px;">
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Phong Shop</a>
+        </div>
+        <div class="container-fluid">
+            <form class="navbar-form navbar-left" action="/doSearch">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search: name, producer" name="txtSearch">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>Add New Product</h2>
+                <form action="/doInsert" method="POST" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Product ID:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="" placeholder="Enter productID..." name="txtID"
+                                required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Product Name:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="" placeholder="Enter product name..."
+                                name="txtName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Product Price:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="" placeholder="Enter product price..."
+                                name="txtPrice" required>
+                            <label id="lblPriceError" style="color: red;">{{model.errorMsg}}</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Product Producer:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="" placeholder="Enter producer..."
+                                name="txtProducer" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Image:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="" placeholder="Enter Image..."
+                                name="txtImage">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="fakeimg">
+                    <img src="/images/avt.jpg" alt="avatar" width="100%">
+                </div>
+                <div class="myName">
+                    <h3 style="font-family: Trebuchet MS">Le Hong Phong</h3>
+                    <h3 style="font-family: Trebuchet MS">GCH18715</h3>
+                    <h3 style="font-family: Trebuchet MS"><strong>Hotline:</strong>0987005806</h3>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Follow Me</h3>
+                <p>Some text..</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; Copyright by Lee Phong</p>
+    </div>
+</body>
+
+</html>
